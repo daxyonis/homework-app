@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "weeks",
+  "info": {
+    "name": "Week"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "beginDate": {
+      "type": "date"
+    },
+    "endDate": {
+      "type": "date"
+    },
+    "number": {
+      "type": "integer"
+    },
+    "note": {
+      "type": "string"
+    },
+    "messages": {
+      "collection": "message",
+      "via": "week"
+    },
+    "class": {
+      "model": "class",
+      "via": "weeks"
+    }
+  }
+}
