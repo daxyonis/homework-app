@@ -15,13 +15,12 @@
     "published": {
       "type": "datetime"
     },
-    "author": {
-      "plugin": "users-permissions",
-      "model": "user"
+    "teacher": {
+      "model": "teacher"
     },
     "week": {
-      "via": "messages",
-      "model": "week"
+      "model": "week",
+      "via": "messages"
     }
   }
 }

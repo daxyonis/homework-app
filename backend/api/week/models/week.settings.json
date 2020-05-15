@@ -22,8 +22,8 @@
       "type": "string"
     },
     "messages": {
-      "collection": "message",
-      "via": "week"
+      "via": "week",
+      "collection": "message"
     },
     "class": {
       "model": "class",
