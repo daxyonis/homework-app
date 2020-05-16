@@ -28,6 +28,10 @@
     "class": {
       "model": "class",
       "via": "weeks"
+    },
+    "communications": {
+      "via": "week",
+      "collection": "communication"
     }
   }
 }

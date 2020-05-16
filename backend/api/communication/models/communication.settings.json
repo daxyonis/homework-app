@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "communications",
+  "info": {
+    "name": "Communication"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "subject": {
+      "type": "string"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "INFO",
+        "LESSON",
+        "HOMEWORK",
+        "TEST"
+      ]
+    },
+    "body": {
+      "type": "richtext"
+    },
+    "week": {
+      "model": "week",
+      "via": "communications"
+    },
+    "documents": {
+      "collection": "document",
+      "via": "communication"
+    },
+    "teacher": {
+      "model": "teacher"
+    }
+  }
+}
