@@ -20,11 +20,12 @@
         <div class="pt-3">
             <div class="card border-primary mb-3" 
                   v-for="message in messages" :key="message.id">
-                <div class="card-header">par M. {{message.teacher.firstname}}</div>
+                <div class="card-header">{{message.subject}}</div>
                 <div class="card-body">                    
                     <p class="card-text">{{message.body}}</p>
                 </div>
-                <div class="card-footer">
+                <div class="card-footer">                                     
+                    par {{message.teacher.firstname}}                        
                     {{$moment(message.created_at).format('YYYY-MM-DD HH:mm')}}
                 </div>
             </div>
@@ -34,11 +35,12 @@
         <div class="pt-3">
             <div class="card border-primary mb-3" 
                   v-for="message in lessons" :key="message.id">
-                <div class="card-header">par M. {{message.teacher.firstname}}</div>
+                <div class="card-header">{{message.subject}}</div>
                 <div class="card-body">                    
                     <p class="card-text">{{message.body}}</p>
                 </div>
                 <div class="card-footer">
+                    par {{message.teacher.firstname}}    
                     {{$moment(message.created_at).format('YYYY-MM-DD HH:mm')}}
                 </div>
             </div>
@@ -48,11 +50,12 @@
         <div class="pt-3">
             <div class="card border-primary mb-3" 
                   v-for="message in homeworks" :key="message.id">
-                <div class="card-header">par M. {{message.teacher.firstname}}</div>
+                <div class="card-header">{{message.subject}}</div>
                 <div class="card-body">                    
                     <p class="card-text">{{message.body}}</p>
                 </div>
                 <div class="card-footer">
+                    par {{message.teacher.firstname}}   
                     {{$moment(message.created_at).format('YYYY-MM-DD HH:mm')}}
                 </div>
             </div>
@@ -62,11 +65,12 @@
         <div class="pt-3">
             <div class="card border-primary mb-3" 
                   v-for="message in tests" :key="message.id">
-                <div class="card-header">par M. {{message.teacher.firstname}}</div>
+                <div class="card-header">{{message.subject}}</div>
                 <div class="card-body">                    
                     <p class="card-text">{{message.body}}</p>
                 </div>
                 <div class="card-footer">
+                    par {{message.teacher.firstname}}   
                     {{$moment(message.created_at).format('YYYY-MM-DD HH:mm')}}
                 </div>
             </div>
