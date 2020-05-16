@@ -1,0 +1,23 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "simple app to manage homework",
+  "author": "daxyonis",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/apollo": "^4.0.0-rc19",
+    "@nuxtjs/axios": "^5.3.6",
+    "@nuxtjs/dotenv": "^1.4.0",
+    "graphql": "^15.0.0",    
+    "nuxt": "^2.0.0"
+  },
+  "devDependencies": {
+    "@nuxtjs/moment": "^1.6.1"
+  }
+}

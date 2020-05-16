@@ -1,0 +1,19 @@
+query Weeks { 
+            weeks{
+                id
+                beginDate
+                endDate
+                note
+                communications {
+                id
+                subject
+                type
+                body
+                created_at
+                teacher {
+                  id
+                  firstname
+                }
+              }
+            }
+        }

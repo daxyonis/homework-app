@@ -1,0 +1,17 @@
+query Week($id: Int) {
+            week(id: $id){
+              id
+              beginDate
+              endDate
+              note
+              messages {
+                id
+                body
+                created_at
+                teacher {
+                  id
+                  firstname
+                }
+              }
+            }
+        }
