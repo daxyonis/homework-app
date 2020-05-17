@@ -36,8 +36,7 @@ export default {
         };
     },
     methods: {
-        selectWeek(week){
-            this.selectedWeek = week;
+        selectWeek(){            
             this.$emit('select-week', this.selectedWeek);
         }
     },
@@ -51,7 +50,8 @@ export default {
                 return momentB.diff(momentA);
                 });
             if(this.selectedWeek.id == 0 && sorted.length){
-                this.selectWeek(sorted[0]);
+                this.selectedWeek = sorted[0];
+                this.selectWeek();
             }
             return sorted;
         }
