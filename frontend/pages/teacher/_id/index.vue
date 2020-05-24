@@ -1,6 +1,16 @@
 <template>
     <div class="row">        
-      Classes
+      <div class="col-lg-12 mt-3 ml-3">
+        <h1> Mes Classes </h1>
+        <ul class="cuteList">
+          <li v-for="c in classes" :key="c.id">
+            <nuxt-link 
+            :to="{name: 'teacher-id-class-classId', params:{ id: c.teacher.id, classId: c.id }}">
+            {{c.name}}
+            </nuxt-link>
+          </li>
+        </ul>        
+      </div>
     </div>
 </template>
 
@@ -11,13 +21,12 @@ export default {
   asyncData (context) {
     console.log(context.env);
     console.log(context.params);
-    return context.$axios.$get(`${context.env.BASE_API_URL}/teachers/${context.params.id}`)
+    return context.$axios.$get(`${context.env.BASE_API_URL}/classes?teacher.id=${context.params.id}`)
       .then((res) => {
         console.log(res);
         return { 
-          id: res.id,
-          firstname: res.firstname,
-          lastname: res.lastname }
+          classes: res
+          }
       })
   },
   
@@ -26,10 +35,13 @@ export default {
   },
   methods: {
     
-  },
+  },  
  
 }
 </script>
 
 <style>
+  ul.cuteList {
+    list-style: none;
+  }
 </style>
