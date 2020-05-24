@@ -1,3 +1,4 @@
+require('dotenv').config()
 
 export default {
   mode: 'universal',
@@ -40,16 +41,16 @@ export default {
   ** Nuxt.js dev-modules
   */
   buildModules: [
-    '@nuxtjs/moment'
+    '@nuxtjs/moment',
+    // Doc: https://github.com/nuxt-community/dotenv-module
+    '@nuxtjs/dotenv',
   ],
   /*
   ** Nuxt.js modules
   */
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios',
-    // Doc: https://github.com/nuxt-community/dotenv-module
-    '@nuxtjs/dotenv',
+    '@nuxtjs/axios',    
     '@nuxtjs/apollo',
   ],
   /*
@@ -72,7 +73,7 @@ export default {
   apollo: {  
     clientConfigs: {
       default: {
-        httpEndpoint: process.env.BASE_API_URL || 'http://localhost:1337/graphql'
+        httpEndpoint: process.env.BASE_API_GRAPHQL_URL || 'http://localhost:1337/graphql'
       }
     }
   },
