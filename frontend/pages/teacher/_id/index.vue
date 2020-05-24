@@ -17,13 +17,14 @@
 <script>
 
 export default {
+  // This runs before component is rendered
   //The result from asyncData will be merged with data
   asyncData (context) {
-    console.log(context.env);
-    console.log(context.params);
+    // console.log(context.env);
+    // console.log(context.params);
     return context.$axios.$get(`${context.env.BASE_API_URL}/classes?teacher.id=${context.params.id}`)
       .then((res) => {
-        console.log(res);
+        // console.log(res);
         return { 
           classes: res
           }

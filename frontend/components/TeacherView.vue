@@ -81,11 +81,13 @@
 </template>
 
 <script>
+import weekQuery from '~/queries/week'
+
 export default {
-    props: ['week'],
+    props: ['selectedWeek'],
     data(){
         return {
-            
+            week: {}
         };
     },
     computed: {
@@ -114,7 +116,19 @@ export default {
                 return [];
         }
 
-    }
+    },
+    apollo:{
+        week: {
+            prefetch: true,
+            query: weekQuery,
+            variables(){
+                // Use vue reactive property here
+                return {
+                    id: this.selectedWeek.id
+                }
+            }
+        }
+    },   
 }
 </script>
 

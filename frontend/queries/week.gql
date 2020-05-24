@@ -1,17 +1,20 @@
-query Week($id: Int) {
+query Week($id: ID!) {
             week(id: $id){
               id
               beginDate
               endDate
               note
-              messages {
+              communications {
                 id
-                body
-                created_at
-                teacher {
-                  id
+                type
+                subject
+                teacher{
                   firstname
                 }
-              }
+                body
+                documents{
+                  name
+                }
             }
         }
+}
