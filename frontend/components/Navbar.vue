@@ -8,7 +8,7 @@
   <div class="collapse navbar-collapse" id="navbarColor01">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Accueil <span class="sr-only">(current)</span></a>
+        <nuxt-link class="nav-link" to="/">Accueil <span class="sr-only">(current)</span></nuxt-link>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Mes Classes</a>

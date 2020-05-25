@@ -31,7 +31,7 @@ export default {
     asyncData(context){
         return context.$axios.$get(`${context.env.BASE_API_URL}/classes?id=${context.params.classId}`)
         .then((res) => {
-            console.log(res);
+            //console.log(res);
             let classFound = {};
             if(res.length){
                 classFound = res[0];
