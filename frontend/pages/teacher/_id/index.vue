@@ -5,6 +5,7 @@
         <ul class="cuteList">
           <li v-for="c in classes" :key="c.id">
             <nuxt-link 
+            no-prefetch
             :to="{name: 'teacher-id-class-classId', params:{ id: c.teacher.id, classId: c.id }}">
             {{c.name}}
             </nuxt-link>
