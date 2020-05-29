@@ -1,6 +1,15 @@
 <template>
-<div class="pt-4">
-    <h2>Travaux pour la semaine</h2>
+<div class="pt-2">
+    <div class="float-md-right">
+        <button type="button" class="btn btn-primary onem">
+            <svg class="bi bi-plus-circle-fill vam" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4a.5.5 0 0 0-1 0v3.5H4a.5.5 0 0 0 0 1h3.5V12a.5.5 0 0 0 1 0V8.5H12a.5.5 0 0 0 0-1H8.5V4z"/>
+            </svg>
+            <span class="vam">Nouvelle communication</span>
+        </button>
+    </div>
+    <div class="clearfix"></div>
+    <h2>Communications et travaux pour la semaine</h2>
     <ul class="nav nav-pills nav-fill" id="myTab" role="tablist">
         <li class="nav-item" role="presentation">
             <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Messages</a>
@@ -133,5 +142,12 @@ export default {
 </script>
 
 <style>
+    .onem {
+        font-size: 1em;
+    }
 
+    .vam {
+        vertical-align: middle;
+        margin-right: 5px;
+    }
 </style>
