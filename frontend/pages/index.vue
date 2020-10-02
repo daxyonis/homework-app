@@ -4,7 +4,7 @@
     <div class="card text-white bg-success mb-3" style="max-width: 20rem;">    
       <nuxt-link to="/teacher/1" class="home-link">
         <div class="card-body">
-          <h4 class="card-title p-5">Je suis enseignant(e)</h4>        
+          <h5 class="card-title p-5">Je suis enseignant(e)</h5>        
         </div>    
       </nuxt-link>
     </div>
@@ -12,7 +12,7 @@
     <div class="card text-white bg-info mb-3" style="max-width: 20rem;">    
       <nuxt-link to="/student/1" class="home-link">
         <div class="card-body">
-          <h4 class="card-title p-5">Je suis élève</h4>        
+          <h5 class="card-title p-5">Je suis élève</h5>        
         </div>  
       </nuxt-link>
     </div>  

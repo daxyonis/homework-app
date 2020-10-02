@@ -13,7 +13,7 @@ module.exports = {
           // AND filtering
           const property = andFilter.split('_')[0];
           const values = params[andFilter];
-          const model = strapi.query('communication').model;        
+          const model = strapi.query('article').model;        
           return model.query(qb => {
             qb.where(property, 'LIKE', `%${values[0]}%`)
             for(let i=1; i<values.length; i++){
@@ -22,7 +22,7 @@ module.exports = {
           }).fetchAll()        
         } else {
           // Normal behavior
-          return strapi.query('communication').find(params, populate);
+          return strapi.query('article').find(params, populate);
         }                
     },
 };
